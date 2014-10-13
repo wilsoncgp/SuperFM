@@ -1,11 +1,19 @@
 package com.wilsoncgp.superfm.screens;
 
+import com.wilsoncgp.superfm.SuperFMGame;
 import com.wilsoncgp.superfm.screens.base.BaseScreen;
 
 /**
  * Created by Liam on 12/10/2014.
  */
 public class MatchScreen extends BaseScreen {
+
+    final SuperFMGame game;
+
+    public MatchScreen(SuperFMGame game) {
+        this.game = game;
+    }
+
     @Override
     public void render(float delta) {
 

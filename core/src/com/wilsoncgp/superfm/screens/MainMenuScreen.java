@@ -34,7 +34,7 @@ public class MainMenuScreen extends BaseScreen {
         // Load button images and rectangles
         startButtonImage = new Texture(Gdx.files.internal("buttons/start_button.png"));
         startButtonRectangle = new Rectangle(screenRectangle.x + padding, screenRectangle.y + padding,
-                                             screenRectangle.width - (2 * padding), screenRectangle.y - (2 * padding));
+                                             screenRectangle.width - (2 * padding), screenRectangle.height - (2 * padding));
     }
 
     @Override

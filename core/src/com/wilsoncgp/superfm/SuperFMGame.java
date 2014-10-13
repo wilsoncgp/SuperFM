@@ -10,7 +10,6 @@ import com.wilsoncgp.superfm.screens.MainMenuScreen;
 
 public class SuperFMGame extends Game {
 	public SpriteBatch batch;
-	Texture img;
 	
 	@Override
 	public void create () {
