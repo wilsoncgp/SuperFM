@@ -1,5 +1,6 @@
 package com.wilsoncgp.superfm.buttons.base;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.wilsoncgp.superfm.SuperFMGame;
 import com.wilsoncgp.superfm.base.UpdatableObject;
@@ -9,6 +10,7 @@ import com.wilsoncgp.superfm.base.UpdatableObject;
  */
 public abstract class Button implements UpdatableObject {
     protected Rectangle rectangle;
+    protected Texture texture;
 
     public Button(int x, int y, int width, int height) {
         this.rectangle = new Rectangle(x, y, width, height);
@@ -19,6 +21,10 @@ public abstract class Button implements UpdatableObject {
     }
 
     public abstract boolean containsPoint(float x, float y);
+
+    public boolean hasTexture() {
+        return texture != null;
+    }
 
     public abstract void onTap(SuperFMGame game);
 }

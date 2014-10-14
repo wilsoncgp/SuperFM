@@ -1,10 +1,16 @@
 package com.wilsoncgp.superfm.buttons;
 
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
+import com.sun.glass.ui.Pixels;
 import com.wilsoncgp.superfm.SuperFMGame;
 import com.wilsoncgp.superfm.buttons.base.Button;
 import com.wilsoncgp.superfm.screens.MatchScreen;
+
+import java.awt.Color;
 
 /**
  * Created by Liam on 13/10/2014.
@@ -26,6 +32,11 @@ public class StartGameButton extends Button{
 
     @Override
     public void onTap(SuperFMGame game) {
+        ShapeRenderer shapeRenderer = new ShapeRenderer();
+        shapeRenderer.setProjectionMatrix(new OrthographicCamera().combined);
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+        shapeRenderer.setColor(new com.badlogic.gdx.graphics.Color(0.8f, 0.2f, 0.2f, 1.0f));
+        shapeRenderer.rect(this.rectangle.getX(), this.rectangle.getY(), this.rectangle.getWidth(), this.rectangle.getHeight());
         game.setScreen(new MatchScreen(game));
     }
 
