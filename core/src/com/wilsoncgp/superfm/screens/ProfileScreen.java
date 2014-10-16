@@ -1,5 +1,6 @@
 package com.wilsoncgp.superfm.screens;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.wilsoncgp.superfm.screens.base.BaseScreen;
 
 /**
@@ -38,6 +39,16 @@ public class ProfileScreen extends BaseScreen {
 
     @Override
     public void dispose() {
+
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void draw(SpriteBatch batch) {
 
     }
 }

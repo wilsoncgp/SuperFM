@@ -1,6 +1,8 @@
 package com.wilsoncgp.superfm.screens;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.wilsoncgp.superfm.SuperFMGame;
+import com.wilsoncgp.superfm.models.base.Match;
 import com.wilsoncgp.superfm.screens.base.BaseScreen;
 
 /**
@@ -10,8 +12,11 @@ public class MatchScreen extends BaseScreen {
 
     final SuperFMGame game;
 
-    public MatchScreen(SuperFMGame game) {
+    final Match match;
+
+    public MatchScreen(SuperFMGame game, Match match) {
         this.game = game;
+        this.match = match;
     }
 
     @Override
@@ -46,6 +51,16 @@ public class MatchScreen extends BaseScreen {
 
     @Override
     public void dispose() {
+
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void draw(SpriteBatch batch) {
 
     }
 }

@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.wilsoncgp.superfm.SuperFMGame;
 import com.wilsoncgp.superfm.screens.base.BaseScreen;
@@ -79,6 +80,16 @@ public class MainMenuScreen extends BaseScreen {
 
     @Override
     public void dispose() {
+
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void draw(SpriteBatch batch) {
 
     }
 }
