@@ -32,12 +32,8 @@ public class StartGameButton extends Button{
 
     @Override
     public void onTap(SuperFMGame game) {
-        ShapeRenderer shapeRenderer = new ShapeRenderer();
-        shapeRenderer.setProjectionMatrix(new OrthographicCamera().combined);
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        shapeRenderer.setColor(new com.badlogic.gdx.graphics.Color(0.8f, 0.2f, 0.2f, 1.0f));
-        shapeRenderer.rect(this.rectangle.getX(), this.rectangle.getY(), this.rectangle.getWidth(), this.rectangle.getHeight());
-        game.setScreen(new MatchScreen(game));
+
+        game.setScreen(new MatchScreen(game, new Match()));
     }
 
     @Override
@@ -47,6 +43,14 @@ public class StartGameButton extends Button{
 
     @Override
     public void draw(SpriteBatch batch) {
-
+        if(hasTexture()) {
+            batch.draw(texture, rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight());
+        } else {
+            ShapeRenderer shapeRenderer = new ShapeRenderer();
+            shapeRenderer.setProjectionMatrix(new OrthographicCamera().combined);
+            shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+            shapeRenderer.setColor(new com.badlogic.gdx.graphics.Color(0.8f, 0.2f, 0.2f, 1.0f));
+            shapeRenderer.rect(this.rectangle.getX(), this.rectangle.getY(), this.rectangle.getWidth(), this.rectangle.getHeight());
+        }
     }
 }

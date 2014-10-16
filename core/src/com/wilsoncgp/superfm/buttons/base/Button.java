@@ -3,12 +3,13 @@ package com.wilsoncgp.superfm.buttons.base;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.wilsoncgp.superfm.SuperFMGame;
+import com.wilsoncgp.superfm.base.DrawableObject;
 import com.wilsoncgp.superfm.base.UpdatableObject;
 
 /**
  * Created by Liam on 13/10/2014.
  */
-public abstract class Button implements UpdatableObject {
+public abstract class Button implements DrawableObject {
     protected Rectangle rectangle;
     protected Texture texture;
 

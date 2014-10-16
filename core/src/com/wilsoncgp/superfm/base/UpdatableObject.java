@@ -7,6 +7,4 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  */
 public interface UpdatableObject {
     public abstract void update();
-
-    public abstract void draw(SpriteBatch batch);
 }
